@@ -1,18 +1,25 @@
-import { Inter, Pixelify_Sans, Reem_Kufi_Fun } from 'next/font/google'
+import { Inter, Caveat, Jost } from 'next/font/google'
 
 export const inter = Inter({
     subsets: ['latin'],
     display: 'swap'
 })
 
-export const header = Reem_Kufi_Fun({
-    subsets: ['latin'],
-    display: 'swap',
-    weight: '700'
-})
-
-export const logo = Pixelify_Sans({
+export const subtitleBold = Caveat({
     weight: '700',
     subsets: ['latin'],
     display: 'swap'
 });
+
+export const title = Jost({
+    weight: '700',
+    subsets: ['latin'],
+    display: 'swap'
+})
+
+
+export const description = Jost({
+    weight: '400',
+    subsets: ['latin'],
+    display: 'swap'
+})

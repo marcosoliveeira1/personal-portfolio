@@ -1,4 +1,4 @@
-import { HeaderContact, HeaderNavbar } from "./header/index";
+import { HeaderContact, HeaderNavbar } from "./index";
 
 export function Header() {
     return (

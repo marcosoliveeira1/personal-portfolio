@@ -4,16 +4,14 @@ import { CONFIG } from "@/constants";
 import {
   FaBars,
   FaEnvelope,
-  FaFacebookF,
-  FaLinkedinIn,
   FaPhoneAlt,
   FaPlus,
-  FaTwitter,
-  FaYoutube,
 } from "react-icons/fa";
 import { useState } from "react";
-import { logo } from "@/app/fonts";
+import { subtitleBold } from "@/app/fonts";
 import { SocialIcons } from "./social-links";
+import logoIcon from "../../public/logo.svg"
+import Image from "next/image";
 
 export const HeaderNavbar = () => {
 
@@ -29,15 +27,14 @@ export const HeaderNavbar = () => {
 
   return (
     <>
-      <div className="Navbar w-full top-2 lg:px-0 px-5 fixed lg:top-[50px] z-[50] drop-shadow-md">
-        <div className="container px-4 p-[16px] rounded-lg bg-white">
+      <div className="w-full top-2 lg:px-0 px-5 fixed lg:top-[50px] z-[50] drop-shadow-md">
+        <div className="container px-4 p-[8px] rounded-lg bg-white">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-8 w-full justify-between">
               <div>
-                <a href="#" className={`${logo.className} text-2xl sm:text-2xl md:text-4xl text-black`}>
-                  &lt;
+                <a href="#" className={`${subtitleBold.className} text-2xl sm:text-2xl md:text-4xl text-black flex items-center`}>
+                  <Image src={logoIcon} alt={""} width={60} />
                   {CONFIG.site.title}
-                  /&gt;
                 </a>
               </div>
               {/* Navbar */}
@@ -71,7 +68,7 @@ export const HeaderNavbar = () => {
             <FaPlus className="rotate-45 text-blue-600" size={24} />
           </li>
           <li className="mb-8">
-            <a href="#" className={`${logo.className} text-2xl sm:text-2xl md:text-4xl text-black`}>
+            <a href="#" className={`${subtitleBold.className} text-2xl sm:text-2xl md:text-4xl text-black`}>
               &lt;
               {CONFIG.site.title}
               /&gt;

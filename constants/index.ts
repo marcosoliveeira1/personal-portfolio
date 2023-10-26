@@ -23,11 +23,13 @@ export const CONFIG = {
         }
     ],
     contact: {
+        name: 'Marcos Oliveira',
         phone: '(48) 984032914',
         email: 'olv.marcos1@gmail.com',
         social: {
-            linkedin: 'https://www.linkedin.com/in/marcos-oliveira-b0b0b0b0/',
-            github: 'https://github.com/marcosoliveira1',
+            linkedin: 'https://www.linkedin.com/in/dev-marcos-oliveira/',
+            github: 'https://github.com/marcosoliveeira1',
+            whatsapp: 'http://api.whatsapp.com/send?phone=5548984032914',
             twitter: null,
             youtube: null,
             facebook: null
