@@ -1,26 +1,17 @@
 "use client";
 import { CONFIG } from "@/constants";
-import { useEffect, useState } from "react";
-import { FaLongArrowAltRight, FaPlus } from "react-icons/fa";
-import { BsFillTriangleFill } from "react-icons/bs";
 import Image from 'next/image'
 import marcosImage from '../../public/marcos.jpg';
 import { description, subtitleBold, title } from "@/app/fonts";
 
 export function Hero() {
 
-    useEffect(() => {
-        // AOS.init();
-    }, []);
-    const [pop, setPop] = useState(false);
-    const handelPop = (e: any) => {
-        setPop(!pop);
-        e.preventDefault();
-    }
+    const { yearsDeveloping, locatedAt } = CONFIG.about;
+
 
     return (
         <>
-            <div className="h-auto w-full relative pt-[130px] lg:pt-[200px] pb-40 overflow-hidden bg-gray-50 text-zinc-900 text-sm">
+            <div className="h-auto w-full relative pt-[130px] lg:pt-[200px] pb-10 lg:pb-40 overflow-hidden bg-gray-50 text-zinc-900 text-sm">
                 <div className="container min-[500px]:grid min-[500px]:grid-cols-2 gap-4 px-10">
                     <div className={`${title.className} uppercase flex flex-col tracking-wide-subtitle gap-6`}>
                         <span>Olá, <span className="text-sky-300">meu nome é</span></span>
@@ -38,8 +29,8 @@ export function Hero() {
                         </div>
                     </div>
 
-                    <div className={`${description.className} text-lg tracking-widest text-gray-500 pb-4 md:pb-10 col-span-2 md:col-span-1 opacity-60`}>
-                        <p>Com sede em Florianópolis/SC, tenho mais de 5 anos de experiência em desenvolvimento web,
+                    <div className={`${description.className} text-lg tracking-widest text-gray-500 pb-4 md:pb-10 col-span-2 md:col-span-1 text-opacity-40`}>
+                        <p>Com sede em {locatedAt}, tenho mais de {yearsDeveloping} anos de experiência em desenvolvimento web,
                             abrangendo desde o front-end até o back-end.
                             Vamos trabalhar juntos para criar algo incrível!</p>
                     </div>
