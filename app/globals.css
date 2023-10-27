@@ -5,7 +5,3 @@
 .container {
   @apply mx-auto
 }
-
-body {
-  @apply text-gray-400
-}
