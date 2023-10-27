@@ -27,7 +27,7 @@ export const HeaderNavbar = () => {
 
   return (
     <>
-      <div className="w-full top-2 lg:px-0 px-5 fixed lg:top-[50px] z-[50] drop-shadow-md">
+      <div className="w-full top-2 lg:px-0 px-5 fixed lg:top-[50px] z-[50] drop-shadow-md opacity-90">
         <div className="container px-4 p-[8px] rounded-lg bg-white">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-8 w-full justify-between">
