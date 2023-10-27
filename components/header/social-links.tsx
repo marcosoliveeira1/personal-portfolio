@@ -1,4 +1,4 @@
-import { FaFacebookF, FaLinkedinIn, FaTwitter, FaYoutube, FaGithub } from "react-icons/fa";
+import { FaFacebookF, FaLinkedinIn, FaTwitter, FaYoutube, FaGithub, FaWhatsapp } from "react-icons/fa";
 
 import { IconLink } from "../icon-link/icon-link";
 
@@ -9,6 +9,7 @@ interface SocialIconsProps {
         linkedin: string | undefined | null;
         youtube: string | undefined | null;
         twitter: string | undefined | null;
+        whatsapp: string | undefined | null;
     },
     classes?: string;
 }
@@ -21,6 +22,7 @@ export function SocialIcons({ social, classes = "flex gap-4" }: SocialIconsProps
             <IconLink url={social?.linkedin} icon={FaLinkedinIn} />
             <IconLink url={social?.youtube} icon={FaYoutube} />
             <IconLink url={social?.twitter} icon={FaTwitter} />
+            <IconLink url={social?.whatsapp} icon={FaWhatsapp} />
         </div>
     );
 }

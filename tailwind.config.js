@@ -1,40 +1,52 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: [
-    "./app/**/*.{js,ts,jsx,tsx,mdx}",
-    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./components/**/*.{js,ts,jsx,tsx,mdx}",
-  ],
-  theme: {
-    backgroundSize: {
-      auto: "auto",
-      cover: "cover",
-      contain: "contain",
-      "50%": "50%",
-      16: "4rem",
-    },
-    extend: {
-      screens: {
-        sm: "567px",
-        md: "768px",
-        lg: "992px",
-        xl: "1200px",
-        "2xl": "1400px",
-      },
-      keyframes: {
-        moveRight: {
-          "0%": { transform: "translateX(0)" },
-          "50%": { transform: "translate(10px) translateY(20px)" },
-          "100%": { transform: "translateX(0)" },
-        },
-      },
-      animation: {
-        moveRight: "moveRight 3s ease-in-out infinite",
-      },
-    },
+import plugin from 'tailwindcss/plugin'
+
+export const content = [
+  "./app/**/*.{js,ts,jsx,tsx,mdx}",
+  "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+  "./components/**/*.{js,ts,jsx,tsx,mdx}",
+]
+export const theme = {
+  letterSpacing: {
+    'wide-subtitle': '.15em'
   },
-  plugins: [],
+  extend: {
+    keyframes: {
+      morph: {
+        "0%": {
+          borderRadius: "60% 40% 30% 70% / 60% 30% 70% 40%",
+        },
+
+        "50%": {
+          borderRadius: "30% 60% 70% 40% / 50% 60% 30% 60%",
+        },
+
+        "100%": {
+          borderRadius: "60% 40% 30% 70% / 60% 30% 70% 40%",
+        }
+      },
+    },
+    animation: {
+      moveRight: "moveRight 3s ease-in-out infinite",
+      morph: "morph 5s ease-in-out infinite"
+    },
+    textShadow: {
+      'title': '2px 2px #000, -2px 2px #000, 2px -2px #000, -2px -2px #000, 5px 5px 0px rgba(0, 0, 0, 0.2)'
+    }
+  },
 }
+export const plugins = [
+  plugin(function ({ matchUtilities, theme }) {
+    matchUtilities(
+      {
+        'text-shadow': (value) => ({
+          textShadow: value,
+        }),
+      },
+      { values: theme('textShadow') }
+    )
+  }),
+]
 
 
 

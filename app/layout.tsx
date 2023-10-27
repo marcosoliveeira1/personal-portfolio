@@ -2,8 +2,9 @@ import "./globals.css";
 import type { Metadata } from 'next'
 
 import { inter } from './fonts'
-import { Header } from "@/components/header";
 import { CONFIG } from "../constants";
+import { Header } from "@/components/header";
+import { Footer } from "@/components/footer/footer";
 
 export const metadata: Metadata = {
   title: CONFIG.site.title,
@@ -13,11 +14,14 @@ export const metadata: Metadata = {
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${inter.className}`}>
-      <body className="bg-gray-100">
+      <link rel="icon" href="/logo.svg" sizes="any" />
+
+      <body className="bg-gray-100 w-screen">
         <Header />
 
         {children}
-        {/* <Footer /> */}
+
+        <Footer />
 
       </body>
     </html>
