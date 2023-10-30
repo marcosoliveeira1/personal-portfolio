@@ -49,7 +49,7 @@ export const HeaderNavbar = () => {
             </div>
             <div className="flex items-center">
               <button
-                className="bg-blue-600 p-3 rounded-lg lg:hidden"
+                className="bg-sky-700 p-3 rounded-lg lg:hidden"
                 onClick={() => handelNav()}
               >
                 <FaBars size={25} className="text-white" />
@@ -65,7 +65,7 @@ export const HeaderNavbar = () => {
       >
         <ul className="py-[70px] px-[38px] ">
           <li className="mb-[45px]" onClick={() => handelNav()}>
-            <FaPlus className="rotate-45 text-blue-600" size={24} />
+            <FaPlus className="rotate-45 text-sky-700" size={24} />
           </li>
           <li className="mb-8">
             <a href="#" className={`${subtitleBold.className} text-2xl sm:text-2xl md:text-4xl text-black`}>
@@ -84,24 +84,24 @@ export const HeaderNavbar = () => {
           ))}
         </ul>
         <div className=" px-[38px] ">
-          <span className="flex justify-between pr-[25px] mb-6">
+          <span className="flex justify-between mb-6">
             <p className="text-black text-[18px] font-medium">Contacte-me</p>
             <SocialIcons social={contact.social} classes="flex justify-end items-center gap-[20px]" />
           </span>
 
 
           <div className="flex items-center gap-[10px] mb-3">
-            <FaEnvelope size={18} className="inline text-blue-600" />
+            <FaEnvelope size={18} className="inline text-sky-700" />
             <span className="font-[500] ">{contact.email}</span>
           </div>
           <div className="flex items-center gap-[10px]">
-            <FaPhoneAlt size={18} className="inline text-blue-600" />
+            <FaPhoneAlt size={18} className="inline text-sky-700" />
             <span className="font-[500] ">{contact.phone}</span>
           </div>
         </div>
       </div>
       <div
-        className={` fixed z-[998] top-0 right-0 lg:right-[-100%]  h-screen opacity-[1] lg:opacity-0 transition-all overflow-hidden delay-[0.3s] bg-black/50 ${nav ? "w-full" : "w-0"
+        className={` fixed z-[998] top-0 right-0 lg:right-[-100%]  h-screen opacity-[1] lg:opacity-0 transition-all overflow-hidden bg-black/50 ${nav ? "w-full" : "w-0"
           } `}
       ></div>
     </>

@@ -8,12 +8,12 @@ export const HeaderContact = () => {
       <div className="flex justify-between items-center container px-2 pt-3 mb-3">
         <div className="flex gap-[25px] text-sm/[17px]">
           <a href={`mailto:+${CONFIG.contact.email}`} className="flex items-center gap-[5px]">
-            <FaEnvelope size={14} className="inline text-blue-600" />
+            <FaEnvelope size={14} className="inline text-sky-700" />
             <span className="font-[400] t ">{contact.email}</span>
           </a>
 
           <a href={`tel:+${CONFIG.contact.phone}`} className=" flex items-center gap-[3px]">
-            <FaPhoneAlt size={14} className="inline text-blue-600" />
+            <FaPhoneAlt size={14} className="inline text-sky-700" />
             <span className="font-[400]">{contact.phone}</span>
           </a>
 
