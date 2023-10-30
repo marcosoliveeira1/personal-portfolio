@@ -5,6 +5,7 @@ import { inter } from './fonts'
 import { CONFIG } from "../constants";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer/footer";
+import { Toaster } from "react-hot-toast";
 
 export const metadata: Metadata = {
   title: CONFIG.site.title,
@@ -20,7 +21,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <Header />
 
         {children}
-
+        <Toaster position="top-right" />
         <Footer />
 
       </body>
