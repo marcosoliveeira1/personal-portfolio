@@ -5,10 +5,16 @@ import { isValidStringLength } from "@/lib/utils";
 import React from "react";
 import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
 
 
 export const sendEmail = async (form: FormData) => {
+    const RESEND_API_KEY = process.env.RESEND_API_KEY ?? null;
+
+    if (RESEND_API_KEY == null) {
+        throw new Error("API key não encontrada!");
+    }
+
+    const resend = new Resend(RESEND_API_KEY);
 
     const senderName = form.get("name");
     const senderEmail = form.get("email");
