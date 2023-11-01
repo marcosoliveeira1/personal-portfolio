@@ -1,17 +1,15 @@
-"use client";
-import { CONFIG } from "@/constants";
+import { about } from "../../lib/data";
 import Image from 'next/image'
 import marcosImage from '../../public/marcos.jpg';
 import { description, subtitleBold, title } from "@/app/fonts";
 
 export function Hero() {
 
-    const { yearsDeveloping, locatedAt } = CONFIG.about;
-
+    const { yearsDeveloping, locatedAt } = about;
 
     return (
         <>
-            <div className="h-auto w-full relative pt-[130px] lg:pt-[200px] pb-10 lg:pb-40 overflow-hidden bg-gray-50 text-zinc-900 text-sm">
+            <div id="home" className="h-auto w-full relative pt-[130px] lg:pt-[200px] pb-10 lg:pb-40 overflow-hidden bg-gray-50 text-zinc-900 text-sm">
                 <div className="container min-[500px]:grid min-[500px]:grid-cols-2 gap-4 px-10">
                     <div className={`${title.className} uppercase flex flex-col tracking-wide-subtitle gap-6`}>
                         <span>Olá, <span className="text-sky-700">meu nome é</span></span>

@@ -1,28 +1,36 @@
 'use client';
 
-import { CONFIG } from "@/constants";
+import { site, contact } from "../../lib/data";
 import {
   FaBars,
   FaEnvelope,
   FaPhoneAlt,
   FaPlus,
 } from "react-icons/fa";
-import { useState } from "react";
 import { subtitleBold } from "@/app/fonts";
 import { SocialIcons } from "./social-links";
 import logoIcon from "../../public/logo.svg"
 import Image from "next/image";
+import { useActiveSectionContext } from "@/context/active-section-context";
+import { links } from "@/lib/data";
+import { useState } from "react";
+import { SectionName } from "@/lib/types";
+import Link from "next/link";
 
 export const HeaderNavbar = () => {
-
-  const { contact } = CONFIG;
-
+  const { activeSection, setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
   const [nav, setNav] = useState(false);
-  const handelNav = (url: string | undefined = undefined) => {
-    setNav(!nav);
-    if (url) console.log('implement roll to');
 
-  };
+
+  const goToSection = (name: SectionName) => {
+    setTimeOfLastClick(Date.now());
+    setActiveSection(name);
+    if (nav) setNav(false);
+  }
+
+  const toggleMobileMenu = () => {
+    setNav(!nav);
+  }
 
 
   return (
@@ -32,16 +40,19 @@ export const HeaderNavbar = () => {
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-8 w-full justify-between">
               <div>
-                <a href="#" className={`${subtitleBold.className} text-2xl sm:text-2xl md:text-4xl text-black flex items-center`}>
+                <Link href="#" className={`${subtitleBold.className} text-2xl sm:text-2xl md:text-4xl text-black flex items-center`}>
                   <Image src={logoIcon} alt={""} width={60} />
-                  {CONFIG.site.title}
-                </a>
+                  {site.title}
+                </Link>
               </div>
               {/* Navbar */}
               <ul className="hidden lg:flex lg:items-center gap-[35px] ">
-                {CONFIG.navbar.map(({ name, url }) => (
-                  <li key={url}>
-                    <a href={url} className="text-black font-medium text-[18px] ">{name}</a>
+                {links.map(({ name, hash }) => (
+                  <li key={hash}>
+                    <Link href={hash}
+                      className={`font-medium text-[18px] pb-2 text-gray-600`}
+                      onClick={() => goToSection(name)}
+                    >{name}</Link>
                   </li>
                 ))}
               </ul>
@@ -50,7 +61,7 @@ export const HeaderNavbar = () => {
             <div className="flex items-center">
               <button
                 className="bg-sky-700 p-3 rounded-lg lg:hidden"
-                onClick={() => handelNav()}
+                onClick={() => toggleMobileMenu()}
               >
                 <FaBars size={25} className="text-white" />
               </button>
@@ -64,22 +75,25 @@ export const HeaderNavbar = () => {
           } `}
       >
         <ul className="py-[70px] px-[38px] ">
-          <li className="mb-[45px]" onClick={() => handelNav()}>
+          <li className="mb-[45px]" onClick={() => toggleMobileMenu()}>
             <FaPlus className="rotate-45 text-sky-700" size={24} />
           </li>
           <li className="mb-8">
-            <a href="#" className={`${subtitleBold.className} text-2xl sm:text-2xl md:text-4xl text-black`}>
+            <Link href="#" className={`${subtitleBold.className} text-2xl sm:text-2xl md:text-4xl text-black`}>
               &lt;
-              {CONFIG.site.title}
+              {site.title}
               /&gt;
-            </a>
+            </Link>
           </li>
 
-          {CONFIG.navbar.map(({ name, url }) => (
-            <li className="mb-8" key={url}>
-              <p onClick={() => handelNav(url)} className="relative text-black text-[18px] before:absolute before:content-[''] before:w-[85%] before:h-[1px] before:bg-gray-300 before:bottom-[-10px]  ">
+          {links.map(({ name, hash }) => (
+            <li className="mb-8" key={hash}>
+              <Link
+                href={hash}
+                onClick={() => goToSection(name)}
+                className="relative text-black text-[18px] before:absolute before:content-[''] before:w-[85%] before:h-[1px] before:bg-gray-300 before:bottom-[-10px]  ">
                 {name}
-              </p>
+              </Link>
             </li>
           ))}
         </ul>
