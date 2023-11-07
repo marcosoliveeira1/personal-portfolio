@@ -34,11 +34,12 @@ export const contact = {
     facebook: null
   }
 } as const;
+
 export const about = {
   developerSince: 2017,
   yearsDeveloping: new Date().getFullYear() - 2017,
   locatedAt: 'Florianópolis/SC',
-  description: 'Sou um desenvolvedor full-stack com experiência prática em desenvolvimento web desde 2017. \n Meu conjunto de habilidades abrange uma ampla variedade de tecnologias e ferramentas, incluindo Java, PHP, Node.js, TypeScript, JavaScript, React, Tailwind CSS, Bootstrap, Svelte, MongoDB, bancos de dados relacionais, Elasticsearch, arquitetura serverless e web scraping. Tenho uma base sólida em programação orientada a objetos, princípios de arquitetura limpa e ampla experiência na escrita de testes unitários. Git e Git flow são parte integrante do meu fluxo de trabalho. Tenho experiência em colaborar com equipes multidisciplinares e entregando aplicações web excepcionais que atendem aos mais altos padrões de qualidade, desempenho e escalabilidade.'
+  description: 'Sou um desenvolvedor full stack com experiência prática em desenvolvimento web desde 2017. \n Meu conjunto de habilidades abrange uma ampla variedade de tecnologias e ferramentas, incluindo Java, PHP, Node.js, TypeScript, JavaScript, React, Tailwind CSS, Bootstrap, Svelte, MongoDB, bancos de dados relacionais, Elasticsearch, arquitetura serverless e web scraping. Tenho uma base sólida em programação orientada a objetos, princípios de arquitetura limpa e ampla experiência na escrita de testes unitários. Git e Git flow são parte integrante do meu fluxo de trabalho. Tenho experiência em colaborar com equipes multidisciplinares e entregando aplicações web excepcionais que atendem aos mais altos padrões de qualidade, desempenho e escalabilidade.'
 } as const;
 
 
@@ -105,7 +106,7 @@ export const experiences = [
 
     "company": "InCuca Tech",
 
-    "position": "Desenvolvedor Full-stack",
+    "position": "Desenvolvedor Full stack",
 
     "activities":
       "Desenvolvimento de sistemas web customizados para clientes americanos em PHP, MySQL, JavaScript e CSS. Manutenção e otimização de sites WordPress aplicando boas práticas. Criação de temas e plugins customizados para WordPress.",
@@ -129,7 +130,7 @@ export const experiences = [
 
     "company": "Força Aérea Brasileira",
 
-    "position": "Desenvolvedor Full-stack",
+    "position": "Desenvolvedor Full stack",
 
     "activities":
       "Participação no desenvolvimento de sistemas internos em ASP Clássico e PostgreSQL. Refatoração e integração de sistemas legados, entregando versões mais robustas. Modelagem de bancos de dados relacionais normalizados.",
