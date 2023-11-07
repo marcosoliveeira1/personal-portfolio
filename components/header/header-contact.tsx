@@ -15,11 +15,8 @@ export const HeaderContact = () => {
             <FaPhoneAlt size={14} className="inline text-sky-700" />
             <span className="font-[400]">{contact.phone}</span>
           </a>
-
         </div>
-        <div className="flex gap-[20px] ">
-          <SocialIcons social={contact.social} />
-        </div>
+        <SocialIcons social={contact.social} />
       </div>
     </div >
   );
