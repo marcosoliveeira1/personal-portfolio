@@ -1,5 +1,5 @@
 import { experiences } from "@/lib/data"
-import { Experience } from "./experiency"
+import { Experience } from "./experience"
 import { ExperienceType } from "@/lib/types"
 
 export const Experiences = () => {
@@ -7,15 +7,16 @@ export const Experiences = () => {
 
         <section>
             <div className="mx-auto flex flex-col items-start">
-                <div className="relative wrap overflow-hidden pt-6 h-full">
-                    <div className="border-[2px] border-sky-900 absolute h-full left-1/2 transform -translate-x-1/2 opacity-50"
-                    ></div>
+                <ul className="relative wrap overflow-hidden pt-6 h-full">
+                    <li key={0} data-test={0} className="border-[2px] border-sky-900 absolute h-full left-1/2 transform -translate-x-1/2 opacity-50"
+                    ></li>
                     {
                         experiences.map((experience: ExperienceType, index) => {
-                            return <Experience experience={experience} index={index} />
+                            return <li key={index} data-test={index}><Experience experience={experience} isOdd={index % 2 === 0} /></li>;
                         })
                     }
-                </div>
+
+                </ul>
 
             </div>
         </section >
