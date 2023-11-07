@@ -17,7 +17,7 @@ export function Hero() {
                         <span>e sou um Desenvolvedor <span className={`${subtitleBold.className} capitalize text-3xl`}>Full Stack</span></span>
                     </div>
                     <div className="relative max-w-xl h-auto md:row-span-2">
-                        <div className="md:absolute md:top-1/2 md:left-1/2 md:transform md:-translate-x-1/2 md:-translate-y-1/2 md:w-full p-4 w-[200px]">
+                        <div className="md:absolute md:top-1/2 md:left-1/2 md:transform md:-translate-x-1/2 md:-translate-y-1/2 md:w-full p-4 w-[200px] mx-auto">
 
                             <Image
                                 src={marcosImage}
@@ -27,10 +27,9 @@ export function Hero() {
                         </div>
                     </div>
 
-                    <div className={`${description.className} text-lg tracking-widest text-gray-500 pb-4 md:pb-10 col-span-2 md:col-span-1 text-opacity-40`}>
-                        <p>Com sede em {locatedAt}, tenho mais de {yearsDeveloping} anos de experiência em desenvolvimento web,
-                            abrangendo desde o front-end até o back-end.
-                            Vamos trabalhar juntos para criar algo incrível!</p>
+                    <div className={`${description.className} text-lg tracking-widest text-gray-600 pb-4 md:pb-10 col-span-2 md:col-span-1 text-opacity-60`}>
+                        <p>Com sede em {locatedAt}, eu estou pronto para colaborar e criar projetos incríveis ao seu lado.
+                            Vamos transformar suas ideias em realidade!</p>
                     </div>
                 </div>
 

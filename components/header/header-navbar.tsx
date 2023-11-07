@@ -18,7 +18,7 @@ import { SectionName } from "@/lib/types";
 import Link from "next/link";
 
 export const HeaderNavbar = () => {
-  const { activeSection, setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
+  const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
   const [nav, setNav] = useState(false);
 
 
