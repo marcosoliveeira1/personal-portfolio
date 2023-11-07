@@ -40,7 +40,7 @@ export const HeaderNavbar = () => {
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-8 w-full justify-between">
               <div>
-                <Link href="#" className={`${subtitleBold.className} text-2xl sm:text-2xl md:text-4xl text-black flex items-center`}>
+                <Link href="/" className={`${subtitleBold.className} text-2xl sm:text-2xl md:text-4xl text-black flex items-center`}>
                   <Image src={logoIcon} alt={""} width={60} />
                   {site.title}
                 </Link>
