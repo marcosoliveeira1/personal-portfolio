@@ -7,6 +7,7 @@ import { Header } from "@/components/header";
 import { Footer } from "@/components/footer/footer";
 import { Toaster } from "react-hot-toast";
 import ActiveSectionContextProvider from "@/context/active-section-context";
+import { Analytics } from '@vercel/analytics/react';
 
 export const metadata: Metadata = {
   title: site.title,
@@ -25,7 +26,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           <Toaster position="top-right" />
           <Footer />
         </ActiveSectionContextProvider>
-
+        <Analytics />
       </body>
     </html>
   );
