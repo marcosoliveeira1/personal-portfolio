@@ -8,6 +8,7 @@ import { Footer } from "@/components/footer/footer";
 import { Toaster } from "react-hot-toast";
 import ActiveSectionContextProvider from "@/context/active-section-context";
 import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export const metadata: Metadata = {
   title: site.title,
@@ -27,6 +28,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           <Footer />
         </ActiveSectionContextProvider>
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
