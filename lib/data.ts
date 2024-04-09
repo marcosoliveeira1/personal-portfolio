@@ -48,6 +48,31 @@ export const experiences = [
   {
 
     "period": {
+      "begin": "01/2024",
+      "end": "Atual"
+    },
+
+    "company": "Cidadania Já",
+
+    "position": "Engenheiro de Software Sênior",
+
+    "activities":
+      "Desenvolvimento e otimização de sites. Implementação de práticas de SEO para melhorar o ranking nos mecanismos de busca. Integração e implementação de chatbots para melhorar a interação com os usuários. Trabalho em equipe seguindo metodologias ágeis para garantir a entrega eficiente do projeto. Atualização de software, correção de bugs e debugging nos fluxos de automação do funil de marketing.",
+
+    "stack": [
+      "Javascript",
+      "PHP",
+      "Chatbots",
+      "OpenAI",
+      "Node.js",
+      "MongoDB",
+      "Docker",
+    ]
+
+  },
+  {
+
+    "period": {
       "begin": "12/2022",
       "end": "09/2023"
     },
